@@ -24,7 +24,7 @@ YUI().use('app-base', 'model', 'node-style', function (Y) {
         ],
 
         views: {
-            noSqaure: {
+            noSquare: {
                 type    : 'View',
                 preserve: true
             },
@@ -41,7 +41,7 @@ YUI().use('app-base', 'model', 'node-style', function (Y) {
     });
 
     app.handleRoot = function () {
-        this.showView('noSqaure');
+        this.showView('noSquare');
     };
 
     app.handleColor = function (req) {
