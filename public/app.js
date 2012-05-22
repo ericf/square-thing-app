@@ -9,6 +9,7 @@ YUI().use('app-base', 'model', 'node-style', function (Y) {
 
         render: function () {
             var color = this.get('square').get('color');
+
             this.get('container').setStyle('backgroundColor', color);
             return this;
         }
@@ -18,17 +19,7 @@ YUI().use('app-base', 'model', 'node-style', function (Y) {
         square       : new Y.Model(),
         serverRouting: true,
 
-        routes: [
-            {path: '/',       callback: 'handleRoot'},
-            {path: '/:color', callback: 'handleColor'}
-        ],
-
         views: {
-            noSquare: {
-                type    : 'View',
-                preserve: true
-            },
-
             square: {
                 type    : 'SquareView',
                 preserve: true
@@ -40,22 +31,24 @@ YUI().use('app-base', 'model', 'node-style', function (Y) {
         }
     });
 
-    app.handleRoot = function () {
-        this.showView('noSquare');
-    };
+    app.route('/', function () {
+        this.showView(null);
+    });
 
-    app.handleColor = function (req) {
+    app.route('/:color', function (req) {
         var square = this.get('square').setAttrs(req.params);
 
         this.showView('square', {
             container: '.square',
             square   : square
         });
-    };
+    });
 
     app.onColorSubmit = function (e) {
+        var color = Y.one('input').get('value');
+
         e.preventDefault();
-        this.navigate(Y.one('input').get('value'));
+        this.navigate(color);
     };
 
     app.render();
