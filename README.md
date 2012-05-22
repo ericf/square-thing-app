@@ -11,3 +11,8 @@ written such that it works perfectly fine _without_ JavaScript. But with
 JavaScript enabled the experienced will be enhanced and performance will be
 better because it won't be making requests to the server. Progressive
 enhancement FTW!
+
+The interesting bits are in:
+
+* `server.js`
+* `public/app.js`
