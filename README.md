@@ -1,7 +1,7 @@
 Square Thing App
 ================
 
-Super simple example app using YUI's Y.App component.
+Super simple example app using YUI's [`Y.App`][Y.App] component.
 
 **http://square-thing-app.herokuapp.com/**
 
@@ -16,3 +16,5 @@ The interesting bits are in:
 
 * `server.js`
 * `public/app.js`
+
+[Y.App]: http://yuilibrary.com/yui/docs/app/#app-component
