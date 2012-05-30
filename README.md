@@ -1,9 +1,9 @@
-Simple Y.App Example
-====================
+Square Thing App
+================
 
 Super simple example app using YUI's Y.App component.
 
-**http://yaf-app-routing.herokuapp.com/**
+**http://square-thing-app.herokuapp.com/**
 
 The purpose of this app is to show how change in the URL can lead to a state
 change in a model which then causes a view to update the UI. This little app is
