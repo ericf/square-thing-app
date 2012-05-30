@@ -1,6 +1,6 @@
 YUI().use('app-base', 'model', 'node-style', function (Y) {
 
-    Y.SquareView = Y.Base.create('sqaureView', Y.View, [], {
+    Y.SquareView = Y.Base.create('squareView', Y.View, [], {
         containerTemplate: '<div class="square" />',
 
         initializer: function () {
