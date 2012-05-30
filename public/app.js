@@ -36,7 +36,10 @@ YUI().use('app-base', 'model', 'node-style', function (Y) {
     });
 
     app.route('/:color', function (req) {
-        var square = this.get('square').setAttrs(req.params);
+        var color  = req.params.color,
+            square = this.get('square');
+
+        square.set('color', color);
 
         this.showView('square', {
             container: '.square',
